@@ -16,10 +16,67 @@ img {
     max-width: 100%;
 }
 
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 .row {
     display: flex;
 }
 
+.testimonial__grid {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "clifford" 
+          "walters"
+          "harmon"
+          "abrahms"
+          "whittle";
+
+    gap: 2em;
+}
+
+#clifford {
+    grid-area: clifford;
+}
+
+#walters {
+    grid-area: walters;
+}
+
+#harmon {
+    grid-area: harmon;
+}
+
+#abrams {
+    grid-area: abrams;
+}
+
+#whittle {
+    grid-area: whittle;
+}
+
 /* Frontend Mentor Styles */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 700px) {
+    .testimonial__grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "clifford clifford walters whittle"
+            "harmon abrams abrams whittle";
+    }
+}
