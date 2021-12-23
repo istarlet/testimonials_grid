@@ -1,1 +1,1 @@
-# Frontend Mentor | Testimonials Grid
+# Frontend Mentor | Testimonials Grid Challenge
